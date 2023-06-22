@@ -1,0 +1,168 @@
+$green: #219150;
+$black: #10221b;
+$white: #fff;
+$light-bg: #eee;
+$border: 2rem solid black;
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 2rem;
+}
+
+// section {
+//     padding: 5rem 9%;
+// }
+// *{
+//     font-family: 'poppins',sans-serif;
+//     margin: 0;
+//     padding: 0;
+//     border: none;
+//     text-decoration: none;
+//     outline: none;
+//     text-transform: capitalize;
+//     transition: 2s linear;
+// }
+// html{
+//     font-size: 65.5%;
+//     scroll-behavior: smooth;
+//     overflow-x: hidden;
+//     scroll-behavior: smooth;
+//     scroll-padding-top: 5rem;
+//     &::-webkit-scrollbar{
+//         width: 1rem;
+//     }
+//     &::-webkit-scrollbar-track{
+//         background-color: white;
+//     }
+//     &::-webkit-scrollbar-thumb{
+//         background-color:black;
+//     }
+
+// }
+
+.home {
+  padding: 0;
+}
+
+.box {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-size: cover !important;
+  background-position: center !important;
+  padding: 2rem 9%;
+  width: 100%;
+
+  .content {
+    width: 50rem;
+
+    span {
+      font-size: 4rem;
+      color: rgb(255, 255, 255);
+    }
+
+    h3 {
+      font-size: 6rem;
+      color: rgb(255, 255, 255);
+      padding-top: 5rem;
+      text-transform: uppercase;
+    }
+
+    p {
+      line-height: 2;
+      color: black;
+      font-size: 1.5rem;
+      padding: 1rem 0;
+    }
+  }
+}
+
+.rating-container {
+  margin-bottom: 3em;
+}
+
+.swiper-slide {
+  width: 100%;
+}
+.heading {
+  padding-block: 1em;
+  font-size: 2rem;
+  text-align: center;
+}
+
+// .heading{
+
+//     text-align:center;
+//     margin-bottom:2.5rem;
+//     font-size:4rem;
+//     color:black;
+
+// }
+
+// .landmark{
+
+//     .box-container{
+
+//         @include grid(25rem);
+//         .box{
+//             text-align:center ;
+//             padding: 1rem;
+
+//             img{
+//                 height: 20rem;
+//                 width: 20rem;
+//                 border-radius:50% ;
+//                 margin-bottom:1rem ;
+
+//             }
+//             h3{
+//                 font-size: 2rem;
+//                 color: aliceblue;
+
+//             }
+//             p{
+//                 font-size: 1.5rem;
+//                 color:black;
+//                 padding:1rem 0 ;
+//                 line-height: 2;
+
+//             }
+
+//         }
+//     }
+// }
+.landmark {
+  padding-top: 0;
+  .slide {
+    width: 35rem;
+    height: 30rem;
+    border: $border;
+  }
+  .image {
+    position: relative;
+    overflow: hidden;
+    height: 30rem;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .content {
+    padding: 1rem 0;
+    text-align: center;
+    h3 {
+      font-size: 2rem;
+      color: $black;
+    }
+  }
+  .stars i {
+    font-size: 1.7rem;
+  }
+}
+:host ::ng-deep .p-button {
+  font-size: 2rem;
+}

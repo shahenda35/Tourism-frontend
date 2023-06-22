@@ -1,0 +1,67 @@
+<header class="header">
+  <a class="logo"> Escape </a>
+
+  <nav class="navbar">
+    <!-- <div id="nav-close" class="fas fa-times"></div> -->
+    <a routerLink="" routerLinkActive="active">Home </a> &nbsp;
+    <a routerLink="/cities" routerLinkActive="active">City</a>&nbsp;
+    <a routerLink="/LandMarks" routerLinkActive="active">LandMarks</a>&nbsp;
+    <a routerLink="/agency" routerLinkActive="active">Agency</a>&nbsp;
+    <a routerLink="/aboutUs" routerLinkActive="active">about us</a>&nbsp;
+    <a routerLink="/contactUs" routerLinkActive="active">contact us</a>&nbsp;
+  </nav>
+
+  <div class="icons">
+    <div (click)="showSearchForm()" class="nav-item pi pi-search"></div>
+    <!-- <a class="nav-item pi pi-shopping-cart"></a> -->
+    <a id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" class="nav-item pi pi-bars"></a>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li>
+        <a *ngIf="!isAuthenticated"class="dropdown-item" routerLink="signIn">
+          Login
+        </a>
+      </li>
+      <li>
+        <a *ngIf="!isAuthenticated" class="dropdown-item" routerLink="signup">
+          Register
+        </a>
+      </li>
+      <li>
+        <a *ngIf="isAuthenticated" class="dropdown-item" (click)="logout()">
+          Logout
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+<div *ngIf="showSearchForms" class="search-form">
+  <div (click)="hideForm()" id="close-search" class="fa fa-times"></div>
+  <div>
+    <p-dropdown
+      *ngIf="selectedType.code === ''"
+      [options]="options"
+      [(ngModel)]="selectedType"
+      optionLabel="name"
+    ></p-dropdown>
+  </div>
+  <form *ngIf="selectedType.code === 'agency'" action="">
+    <input
+      (input)="takeUserInput($event)"
+      type="search"
+      name=""
+      id="search-box"
+      placeholder="search here "
+    />
+    <label (click)="goToAgency()" for="search-box" class="fa fa-search"></label>
+  </form>
+  <form *ngIf="selectedType.code === 'city'" action="">
+    <input
+      (input)="takeUserInput($event)"
+      type="search"
+      name=""
+      id="search-box"
+      placeholder="search here "
+    />
+    <label (click)="goToCity()" for="search-box" class="fa fa-search"></label>
+  </form>
+</div>

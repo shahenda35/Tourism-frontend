@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="column">
+        <img src="../../../assets/signup.jpg" alt="" style="height: 749px; width:100%;">
+    </div>
+    <div class="column">
+        <div class="header">
+            <P>SIGNUP</P>
+        </div>
+        <form (ngsubmit)="onSignup()" name="signupForm" [formGroup]="signupForm">
+            <!--username-->
+            <div class="username">
+                <mat-form-field class="full-width" > 
+                    <mat-label>UserName</mat-label>
+                    <input formControlName="username" matInput placeholder="Enter Your Name" required>
+                    <mat-error *ngIf="!signupForm.controls['username'].valid">Name is Required</mat-error>
+                </mat-form-field>
+            </div>
+            
+            <!--email-->
+            <div class="email">
+                <mat-form-field class="full-width" > 
+                    <mat-label>Email</mat-label>
+                    <input formControlName="email" matInput placeholder="Enter Your Email" required>
+                    <mat-error *ngIf="!signupForm.controls['email'].valid">Email is Required</mat-error>
+                </mat-form-field>
+            </div>
+
+            <!--password-->
+            <div class="password">
+                <span>
+                    <a class="aLink" >Forgot Password?</a>
+                </span>
+
+                <mat-form-field class="full-width"> 
+                    <mat-label>Password</mat-label>
+                    <input formControlName="password" matInput [type]="!hide ? 'password' : 'text'" required>
+                    <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'" [attr.aria-pressed]="hide" style="border:none ; background-color: inherit;">
+                        <mat-icon style="padding-right: 10px;">
+                            {{!hide ? 'visibility_off' : 'visibility'}}
+                        </mat-icon>
+                    </button>
+                    <mat-error *ngIf="!signupForm.controls['password'].valid">Password is Required</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="password-confirm">
+                <mat-form-field class="full-width" > 
+                    <mat-label>Confirm Password</mat-label>
+                    <input formControlName="confirmPassword" matInput [type]="!hide ? 'password' : 'text'" required>
+                    <mat-error *ngIf="!signupForm.controls['confirmPassword'].valid">Confirm your password</mat-error>
+                </mat-form-field>
+            </div>
+
+
+            <button mat-flat-button class="button-signup">SignUp</button>
+        </form>
+
+    </div>
+</div>

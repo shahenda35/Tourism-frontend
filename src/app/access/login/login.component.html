@@ -1,0 +1,48 @@
+<div class="bg">
+    <mat-card>
+        <mat-card-content>
+            <div class="header">
+                <P>LOGIN</P>
+            </div>
+
+            <form (ngsubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
+                <!--email-->
+                <div class="email">
+                    <mat-form-field class="full-width" > 
+                        <mat-label>Email</mat-label>
+                        <input formControlName="email" matInput placeholder="Enter Your Email" required>
+                        <mat-error *ngIf="!loginForm.controls['email'].valid">Email is Required</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <!--password-->
+                <div class="password">
+                    <span>
+                        <a class="aLink" >Forgot Password?</a>
+                    </span>
+
+                    <mat-form-field class="full-width" > 
+                        <mat-label>Password</mat-label>
+                        <input formControlName="password" matInput [type]="!hide ? 'password' : 'text'" required>
+                        <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'" [attr.aria-pressed]="hide" style="border:none ; background-color: inherit;">
+                            <mat-icon style="padding-right: 10px;">
+                                {{!hide ? 'visibility_off' : 'visibility'}}
+                            </mat-icon>
+                        </button>
+                        <mat-error *ngIf="!loginForm.controls['password'].valid">Password is Required</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <button mat-flat-button class="button-login">LogIn</button>
+                <p style="margin-top: 10px">Or LogIn with google</p>
+                <button mat-flat-button class="button-google">Google</button>
+            </form>
+
+            <div class="button-signup">
+                <p style="margin-top: 10px">Don't have Account?</p>
+                <!-- <p>Create Account</p> -->
+                <a [routerLink]="['signup']" >Create Account</a>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

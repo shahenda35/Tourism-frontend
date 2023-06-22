@@ -1,0 +1,56 @@
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+.column{
+   float: left;
+   width: 50%;
+   text-align: center;
+   margin: 0px; 
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.header{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 80px;
+}
+
+.aLink{
+    float: right;
+    padding-right: 80px;
+}
+.full-width {
+    width: 80%;
+    
+  }
+  .username{
+    padding-top: 10px;
+  }
+.email{
+    padding-top: 10px;
+}
+
+.password-confirm{
+    padding-top: 10px;
+}
+
+.button-signup{
+    width: 80%;
+    background-color: #72442A;
+    color: white;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    margin-top: 20px;
+}
+
+.button-signup:hover{
+    /* background-color: #a55729; */
+    box-shadow: 2px 2px 5px 5px #d7d3d0;
+}

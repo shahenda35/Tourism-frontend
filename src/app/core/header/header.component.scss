@@ -1,0 +1,186 @@
+$green: #219150;
+$black: #10221b;
+$white: #fff;
+$light-bg: #eee;
+$border: 2rem solid black;
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 1.5rem;
+}
+
+.search-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+
+  #close-search {
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    cursor: pointer;
+    color: $white;
+    font-size: 6rem;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  form {
+    margin: 0 2rem;
+    width: 70rem;
+    border-bottom: 0.2rem solid $white;
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: center;
+
+    input {
+      width: 100%;
+      font-size: 1.7rem;
+      color: $white;
+      text-transform: none;
+      background: none;
+
+      &::placeholder {
+        color: #aaa;
+      }
+    }
+
+    label {
+      font-size: 3rem;
+      cursor: pointer;
+      color: $white;
+
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 9%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  // background-color: #219150;
+
+  .logo {
+    font-size: 2.5rem;
+    margin-right: auto;
+    color: rgb(255, 252, 252);
+    font-weight: bolder;
+  }
+}
+
+.navbar {
+  a {
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: rgb(252, 252, 252);
+    // border: black;
+    // border-radius: 2rem;
+    //border-color: black;
+    //border-style:double;
+    //margin: 15px;
+    // padding: 6px;
+
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+.icons .nav-item,
+.icons .nav-item {
+  margin-left: 2rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: $white;
+
+  &:hover {
+    color: $green;
+  }
+
+  #menu-btn {
+    display: none;
+  }
+}
+.dropdown-menu {
+  transition-duration: 0s;
+}
+.dropdown-item {
+  font-size: 2rem;
+  &:hover {
+    color: $green;
+  }
+}
+:host ::ng-deep {
+  .p-dropdown-label {
+    font-size: 2rem;
+  }
+
+  .p-dropdown-item {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    #menu-btn {
+      display: inline-block;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: $white;
+      z-index: 1000;
+      width: 35rem;
+      height: 100%;
+      box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        margin: 1rem 0;
+        font-size: 3rem;
+      }
+    }
+  }
+}

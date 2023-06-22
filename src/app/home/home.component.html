@@ -1,0 +1,141 @@
+<section class="home" id="home">
+  <div class="swiper home-slider">
+    <swiper-container id="swiper" class="swiper-wrapper">
+      <swiper-slide class="swiper-slide">
+        <div class="box" style=" background: linear-gradient( 0deg, rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)), url('/assets/female-abu-simbel-temple-southern-egypt-lake-nasser.jpg'); ">
+          <div class="content">
+            <span>Luxor</span>
+            <h3>exploring</h3>
+            <p-button routerLink="LandMarks/:id" label="Discover" styleClass="discover-button p-button-lg p-button-rounded p-button-secondary"></p-button>
+          </div>
+        </div>
+      </swiper-slide>
+
+      <swiper-slide class="swiper-slide">
+        <div class="box second" style="background: linear-gradient(0deg,rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)),url(assets/camels-walking-each-other-diani-beach-kenya.jpg); ">
+          <div class="content">
+            <span>Dahab</span>
+            <h3>Exploring</h3>
+            <p-button routerLink="LandMarks/:id" label="Discover" styleClass="discover-button p-button-lg p-button-rounded p-button-secondary"></p-button>
+          </div>
+        </div>
+      </swiper-slide>
+
+      <swiper-slide class="swiper-slide">
+        <div class="box third"style=" background: linear-gradient(0deg,rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5) ), url(assets/fishing-boats-water-sea-with-beautiful-clear-blue-sky.jpg);">
+          <div class="content">
+            <span>Alexandria</span>
+            <h3>Exploring</h3>
+            <p-button routerLink="LandMarks/:id" label="Discover" styleClass="discover-button p-button-lg p-button-rounded p-button-secondary"></p-button>
+          </div>
+        </div>
+      </swiper-slide>
+
+      <swiper-slide class="swiper-slide">
+        <div class="box third"style="background: linear-gradient(0deg,rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)),url(assets/male-small-rowboat-middle-beautiful-sea-with-sun-shining.jpg);">
+          <div class="content">
+            <span>Fayoum</span>
+            <h3>Exploring</h3>
+            <p-button routerLink="LandMarks/:id"label="Discover"styleClass="discover-button p-button-lg p-button-rounded p-button-secondary"></p-button>
+          </div>
+        </div>
+      </swiper-slide>
+
+      <swiper-slide class="swiper-slide">
+        <div class="box third"style="background: linear-gradient( 0deg,rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url(assets/PortSaid-166-1024x682.jpg);">
+          <div class="content">
+            <span>PortSaid</span>
+            <h3>Exploring</h3>
+            <a routerLink="/LandMarks/:id">Discover </a>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+</section>
+
+<section class="landmark" id="show">
+  <h1 class="heading">Our LandMarks</h1>
+  <div class="landmark-slider">
+    <swiper-container
+      effect="coverflow"
+      grab-cursor="true"
+      centered-slides="true"
+      coverflow-effect-rotate="50"
+      coverflow-effect-stretch="0"
+      coverflow-effect-depth="100"
+      coverflow-effect-modifier="1"
+      coverflow-effect-slide-shadows="true"
+      id="landmark-swiper"
+      class="landmark-wrapper"
+    >
+      <swiper-slide class="slide-landmark">
+        <div class="image">
+          <img src="assets/1e.jpg" />
+        </div>
+        <div class="content">
+          <h3>Blue Hole</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+            omnis.
+          </p>
+          <a>read more</a>
+          <div class="rating-container">
+            <p-rating  [cancel]="false"></p-rating>
+          </div>
+        </div>
+      </swiper-slide>
+
+      <swiper-slide class="slide-landmark">
+        <div class="image">
+          <img src="assets/caption.jpg" />
+        </div>
+        <div class="content">
+          <h3>Blue Hole</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+            omnis.
+          </p>
+          <a>read more</a>
+          <div class="rating-container">
+            <p-rating  [cancel]="false"></p-rating>
+          </div>
+        </div>
+      </swiper-slide>
+
+      <swiper-slide class="slide-landmark">
+        <div class="image">
+          <img src="assets/b7.jpg" />
+        </div>
+        <div class="content">
+          <h3>Blue Hole</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+            omnis.
+          </p>
+          <a>read more</a>
+          <div class="rating-container">
+            <p-rating [cancel]="false"></p-rating>
+          </div>
+        </div>
+      </swiper-slide>
+
+      <swiper-slide class="slide-landmark">
+        <div class="image">
+          <img src="assets/b7.jpg" />
+        </div>
+        <div class="content">
+          <h3>Blue Hole</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+            omnis.
+          </p>
+          <a>read more</a>
+          <div class="rating-container">
+            <p-rating  [cancel]="false"></p-rating>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+</section>

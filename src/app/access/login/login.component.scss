@@ -1,0 +1,82 @@
+.bg{
+    min-height:80%;
+    padding: 60px 1rem;
+    display: block;
+    background-image: url("../../../assets/login.jpg");
+    height: 633px;
+}
+mat-card {
+    max-width: 600px;
+    margin: 2em auto;
+    text-align: center;
+    background-color: rgba(255,255,255, 0.4);
+    color: white;
+}
+
+.appearance{
+    color: rgb(255, 255, 255);
+}
+
+.header{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 15px;
+}
+.full-width {
+    width: 80%;
+    
+  }
+.email{
+    padding-top: 10px;
+    
+  }
+
+.button-signup{
+    padding-top: 5px;
+}
+
+.button-signup a{
+    margin-right: 8px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+.aLink{
+    float: right;
+    padding-right: 60px;
+    
+}
+
+.button-login{
+    width: 80%;
+    background-color: #72442A;
+    color: white;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+}
+
+.button-login:hover{
+    /* background-color: #a55729; */
+    box-shadow: 2px 2px 5px 5px #d7d3d0;
+}
+
+.button-google{
+    width: 80%;
+    background-color: white;
+    color: black;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+}
+
+.button-google:hover{
+    /* background-color: #a55729; */
+    box-shadow: 2px 2px 5px 5px #d7d3d0;
+}
+
+
+
+
+
